@@ -1,0 +1,25 @@
+{
+  "name": "vue-cli-plugin-moor-init",
+  "version": "1.0.0",
+  "description": "vue template init",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haitaodesign/vue-cli-plugin-moor-init.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli3.0",
+    "template",
+    "plugins"
+  ],
+  "author": "lihaitao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haitaodesign/vue-cli-plugin-moor-init/issues"
+  },
+  "homepage": "https://github.com/haitaodesign/vue-cli-plugin-moor-init#readme"
+}
