@@ -1,4 +1,4 @@
-import { Assets } from './modules/index.js'
+const  { Assets } = require('./modules/index.js')
 module.exports = (api, opts, rootOptions) => {
   if (opts.replace) {
     Assets(api)
