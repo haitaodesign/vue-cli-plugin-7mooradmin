@@ -1,5 +1,4 @@
-import Assets from './assets.js'
-
+const Assets = require('./assets.js')
 module.exports = {
   Assets
 }
