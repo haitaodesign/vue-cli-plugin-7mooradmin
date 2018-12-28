@@ -6,6 +6,12 @@
 </template>
 
 <script>
+/*
+ * @Author: lihaitao 
+ * @Date: 2018-12-28 11:55:58 
+ * @Last Modified by: lihaitao
+ * @Last Modified time: 2018-12-28 11:56:43
+ */
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {

@@ -1,3 +1,9 @@
+/*
+ * @Author: lihaitao 
+ * @Date: 2018-12-28 11:50:59 
+ * @Last Modified by:   lihaitao 
+ * @Last Modified time: 2018-12-28 11:50:59 
+ */
 module.exports = (api) => {
   api.render({
     './src/assets/images/logo.png': '../templates/default/src/assets/images/logo.png',
