@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "vue-cli-plugin-moor-init.name" . }}
+  labels:
+    app: {{ template "vue-cli-plugin-moor-init.name" . }}
+    chart: {{ template "vue-cli-plugin-moor-init.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "vue-cli-plugin-moor-init.name" . }}
+    release: {{ .Release.Name }}

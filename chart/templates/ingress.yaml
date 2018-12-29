@@ -1,0 +1,31 @@
+{{- if .Values.ingress.enabled -}}
+{{- $ingressPath := .Values.ingress.path -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "vue-cli-plugin-moor-init.name" . }}
+  labels:
+    app: {{ template "vue-cli-plugin-moor-init.name" . }}
+    chart: {{ template "vue-cli-plugin-moor-init.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+{{- if .Values.ingress.tls }}
+  tls:
+    - hosts:
+        - {{ template "vue-cli-plugin-moor-init.domain" . }}
+      secretName: {{ .Values.ingress.tls.secretName }}
+{{- end }}
+  rules:
+    - host: {{ template "vue-cli-plugin-moor-init.domain" . }}
+      http:
+        paths:
+          - path: {{ $ingressPath }}
+            backend:
+              serviceName: {{ template "vue-cli-plugin-moor-init.name" . }}
+              servicePort: http
+{{- end }}

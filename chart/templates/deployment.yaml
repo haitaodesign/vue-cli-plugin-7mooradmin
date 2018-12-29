@@ -1,0 +1,64 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "vue-cli-plugin-moor-init.name" . }}
+  labels:
+    app: {{ template "vue-cli-plugin-moor-init.name" . }}
+    chart: {{ template "vue-cli-plugin-moor-init.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "vue-cli-plugin-moor-init.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "vue-cli-plugin-moor-init.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          volumeMounts:
+            - mountPath: /etc/nginx/conf.d/
+              name: vue-cli-plugin-moor-init
+            # - mountPath: /tmp
+            #   name: export
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+      volumes:
+        - configMap:
+            defaultMode: 420
+            name: vue-cli-plugin-moor-init
+          name: vue-cli-plugin-moor-init
+        # - name: export
+        #   persistentVolumeClaim:
+        #     claimName: export
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
