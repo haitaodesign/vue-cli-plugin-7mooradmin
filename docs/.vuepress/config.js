@@ -1,5 +1,5 @@
 module.exports = {
-  title: '私有云前端开发文档',
+  title: '私有云前端',
   description: '技术架构，组件演示，开发日志...',
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.ico'}]
@@ -7,17 +7,23 @@ module.exports = {
   serviceWorker: true,
   themeConfig: {
     nav: [
-      { text: '开发指南', link: '/guides/' },
-      { text: '开发规范', link: '/specs/' },
-      { text: '组件文档', link: '/components/' },
-      { text: '开发日志', link: '/changelog/'},
-      { text: 'GitLab', link: 'http://git.7moor.com/do/expo/tree/master'}
+      { text: '指南', link: '/guides/' },
+      { text: '规范', link: '/specs/' },
+      { text: '组件', link: '/components/' },
+      { text: '日志', link: '/changelog/'},
+      { text: 'GitLab', link: 'http://git.7moor.com/private-FE'}
     ],
     sidebar: {
       '/components/': [
         '',
         'components-one',
         'components-two'
+      ],
+      '/guides/': [
+        '',
+        'env-building',
+        'quckilystart',
+        'install'
       ]
     }
 
