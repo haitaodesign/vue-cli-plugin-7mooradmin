@@ -1,2 +1,2 @@
 # vue-cli-plugin-moor-init
-中台管理系统模板初始化
+私有云前端开发脚手架
