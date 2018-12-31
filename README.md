@@ -1,7 +1,8 @@
 # vue-cli-plugin-moor-init（私有云前端开发脚手架）
 
 ## 开发指南
-### 文档站点启动
+### 模板开发流程
+### 文档开发流程
 ```
 <!-- 开发 -->
 yarn run dev:docs
