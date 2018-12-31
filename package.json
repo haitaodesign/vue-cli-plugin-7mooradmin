@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-moor-init",
-  "version": "0.1.1",
+  "version": "0.2.8",
   "description": "vue template init",
   "main": "index.js",
   "scripts": {
