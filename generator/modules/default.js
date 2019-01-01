@@ -2,7 +2,7 @@
  * @Author: lihaitao 
  * @Date: 2018-12-31 13:02:28 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2018-12-31 19:37:23
+ * @Last Modified time: 2019-01-01 19:21:59
  */
 const path = require('path')
 module.exports = api => {
@@ -10,6 +10,7 @@ module.exports = api => {
     // 修改ejs模板变量分隔符，避免与vue项目的模板冲突
     delimiter: '$'
   })
+  // 新增依赖
   api.extendPackage({
     dependencies: {
       'axios': '^0.18.0',
@@ -26,6 +27,8 @@ module.exports = api => {
     devDependencies: {
       "@vue/cli-plugin-babel": "^3.2.0",
       '@vue/cli-service': '^3.2.0',
+      '@vue/cli-plugin-eslint': '^3.2.0',
+      '@vue/eslint-config-standard': '^4.0.0',
       'babel-eslint': '^10.0.1',
       'babel-plugin-component': '^1.1.1',
       'element-theme-chalk': '^2.4.11',
