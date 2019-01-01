@@ -23,8 +23,9 @@ module.exports = {
         '',
         'env-building',
         'npm-start',
+        'install',
         'quckilystart',
-        'install'
+        'vue-cli-plguin-moor-init'
       ]
     }
 
