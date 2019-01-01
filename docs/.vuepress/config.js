@@ -22,6 +22,7 @@ module.exports = {
       '/guides/': [
         '',
         'env-building',
+        'npm-start',
         'quckilystart',
         'install'
       ]
