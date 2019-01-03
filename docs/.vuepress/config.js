@@ -22,10 +22,21 @@ module.exports = {
       '/guides/': [
         '',
         'env-building',
+        'env-building-docker',
         'npm-start',
         'install',
         'quckilystart',
         'vue-cli-plguin-moor-init'
+      ],
+      '/specs/': [
+        '',
+        'html-specs',
+        'css-specs',
+        'js-specs',
+        'named-specs',
+        'vue-style-specs',
+        'git-workflow',
+        'markdown-specs'
       ]
     }
 
