@@ -1,5 +1,6 @@
-# 通过第三方插件开发的模板创建项目——vue-cli-plugin-moor-init
+# 创建项目——vue-cli-plugin-moor-init
 
+此模版插件依赖于vue-cli3.0插件系统，需要了解如何开发第三方插件，移步[插件开发指南](https://cli.vuejs.org/zh/dev-guide/plugin-dev.html#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5)
 > 请确保开发环境以及[安装](install.html)说明的操作正确，此安装操作在Mac上使用正常，Window上有待验证
 
 ## 创建一个项目
