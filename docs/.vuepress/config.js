@@ -22,6 +22,7 @@ module.exports = {
       '/guides/': [
         '',
         'env-building',
+        'env-building-docker',
         'npm-start',
         'install',
         'quckilystart',
