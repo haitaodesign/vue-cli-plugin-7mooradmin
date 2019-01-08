@@ -26,7 +26,8 @@ module.exports = {
         'npm-start',
         'install',
         'quckilystart',
-        'vue-cli-plguin-moor-init'
+        'init-project-local',
+        'init-project-docker'
       ],
       '/specs/': [
         '',
