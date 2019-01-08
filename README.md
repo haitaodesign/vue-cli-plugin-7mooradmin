@@ -7,6 +7,14 @@
 <!-- 开发 -->
 yarn run dev:docs
 
-<!-- 构建部署 -->
-yarn run dev:build
+```
+### 文档部署
+
+```
+<!-- 构建 -->
+yarn build
+<!-- 构建静态文件目录 -->
+/docs/.vuepress/dist
+<!-- 域名 -->
+http://fe.private-cloud.7moor.com
 ```
