@@ -47,8 +47,13 @@ docker build -t fedevdocker .
 ```js
 docker run -it -p 8081:8081 -v /Users/lihaitao/Desktop/vue-cli3.0:/workspace fedevdocker sh
 ```
--it：-t让docker分配一个伪终端并绑定到容器的标准输入上, -i则让容器的标准输入保持打开
--v：-v 映射宿主环境目录到容器工作目录，`/Users/lihaitao/Desktop/vue-cli3.0`是本地宿主环境目录，`/workspace`为容器工作目录，`fedevdocker`为镜像名称，`sh`是1以shell命令行的形式打开
+-it：`-t`让docker分配一个伪终端并绑定到容器的标准输入上, `-i`则让容器的标准输入保持打开
+
+-v：-v 映射宿主环境目录到容器工作目录，`/Users/lihaitao/Desktop/vue-cli3.0`是本地宿主环境目录，`/workspace`为容器工作目录
+
+`fedevdocker`为镜像名称
+
+`sh`是1以shell命令行的形式打开
 
 ## 基础学习资料
 
