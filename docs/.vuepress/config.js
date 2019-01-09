@@ -24,7 +24,6 @@ module.exports = {
         'env-building',
         'env-building-docker',
         'npm-start',
-        'install',
         'quckilystart',
         'init-project-local',
         'init-project-docker'
