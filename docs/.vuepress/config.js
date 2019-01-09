@@ -40,6 +40,6 @@ module.exports = {
         'markdown-specs'
       ]
     }
-
-  }
+  },
+  port: 8081
 }
