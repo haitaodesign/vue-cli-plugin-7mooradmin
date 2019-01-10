@@ -1,0 +1,46 @@
+stages:
+- build
+- helm
+- deploy
+
+build:
+  stage: build
+  image: docker:dind
+  cache:
+    key: "$CI_PIPELINE_ID"
+    paths:
+    - VERSION
+  script:
+  - ci/build
+  only:
+    # refs:
+    - master
+    - dev
+
+helm:
+  stage: helm
+  image: harbor.7moor.com/library/helm-cli:latest
+  script:
+  - ci/helm
+  only:
+    changes:
+    - chart/**/*
+    refs:
+    - master
+    - dev
+deploy to production:
+  stage: deploy
+  image: harbor.7moor.com/library/kubectl:latest
+  cache:
+    key: "$CI_PIPELINE_ID"
+    paths:
+    - VERSION
+  script:
+  - ci/deploy
+  environment:
+    name: production
+    url: http://fe.private-cloud.7moor.com
+  only:
+    # refs:
+    - master
+    

@@ -1,0 +1,14 @@
+apiVersion: v1
+appVersion: "1.0"
+description: A Helm chart for fedocs
+name: fedocs
+version: 0.1.0
+keywords:
+  - fedocs
+  - frontend
+sources:
+  - http://git.7moor.com/do/fedocs
+maintainers:
+  - name: Jerry Chan
+    email: chenjj@7moor.com
+engine: gotpl
