@@ -22,8 +22,8 @@ helm:
   script:
   - ci/helm
   only:
-    changes:
-    - chart/**/*
+    # changes:
+    # - chart/**/*
     refs:
     - master
 
