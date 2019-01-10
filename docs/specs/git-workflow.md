@@ -122,3 +122,9 @@ yarn changelog
 npm i yarn -g
 ```
 
+## 参考文档
+
+1. [Angular规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
+2. [git commit 代码提交规范](https://segmentfault.com/a/1190000017205604)
+3. [git-commit-style-guide](https://github.com/feflow/git-commit-style-guide)
+4. [conventionalcommits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
