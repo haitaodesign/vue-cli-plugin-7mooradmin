@@ -15,7 +15,6 @@ build:
   only:
     # refs:
     - master
-    - dev
 
 helm:
   stage: helm
@@ -27,7 +26,7 @@ helm:
     - chart/**/*
     refs:
     - master
-    - dev
+
 deploy to production:
   stage: deploy
   image: harbor.7moor.com/library/kubectl:latest
