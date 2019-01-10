@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+VERSION=$(date +%y%m%dT%H%M%SZ)
+
+echo ${VERSION} > VERSION
+
+DOCKER_REGISTRY_HOST=${DOCKER_REGISTRY_HOST:-harbor.7moor.com}
+# privatefe => private-FE
+DOCKER_IMAGE=${DOCKER_IMAGE:-privatefe/fedocs}
+if [ "${DOCKER_USER}" != "" ] && [ "${DOCKER_PASSWD}" != "" ]; then
+  docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWD} ${DOCKER_REGISTRY_HOST}
+fi
+
+docker build -t ${DOCKER_IMAGE} .
+
+docker tag $DOCKER_IMAGE $DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:latest
+docker tag $DOCKER_IMAGE $DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:$VERSION
+
+docker push $DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:latest
+docker push $DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:$VERSION
