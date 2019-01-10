@@ -9,9 +9,9 @@ fi
 DOCKER_REGISTRY_HOST=${DOCKER_REGISTRY_HOST:-harbor.7moor.com}
 DOCKER_IMAGE=${DOCKER_IMAGE:-privatefe/fedocs}
 
-kubectl -n ${NAMESPACE} get deployment $CI_PROJECT_NAME
+kubectl -n ${NAMESPACE} get deployment fedocs
 if [[ $? -ne 0 ]]; then
   exit 1
 else
-  kubectl -n ${NAMESPACE} set image deployment/$CI_PROJECT_NAME $CI_PROJECT_NAME=$DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:$(cat VERSION)
+  kubectl -n ${NAMESPACE} set image deployment/fedocs fedocs=$DOCKER_REGISTRY_HOST/$DOCKER_IMAGE:$(cat VERSION)
 fi
