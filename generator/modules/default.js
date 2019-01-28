@@ -2,11 +2,11 @@
  * @Author: lihaitao 
  * @Date: 2018-12-31 13:02:28 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2019-01-01 19:21:59
+ * @Last Modified time: 2019-01-28 17:22:44
  */
 const path = require('path')
 module.exports = api => {
-  api.render('../templates/default',{},{
+  api.render('../templates/default', {} ,{
     // 修改ejs模板变量分隔符，避免与vue项目的模板冲突
     delimiter: '$'
   })
