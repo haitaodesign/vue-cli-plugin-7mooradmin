@@ -2,7 +2,7 @@
  * @Author: lihaitao 
  * @Date: 2018-12-31 13:02:28 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2019-01-29 14:46:41
+ * @Last Modified time: 2019-01-30 14:11:34
  */
 
 const modules = require('../templates/modules/index.js')
@@ -27,6 +27,9 @@ module.exports = api => {
       'eslint': '^5.8.0',
       'eslint-plugin-vue': '^5.0.0',
       'vue-template-compiler': '^2.5.21',
+      "style-resources-loader": "^1.2.1",
+      "stylus": "^0.54.5",
+      "stylus-loader": "^3.0.2"
     },
     scripts: {
       "serve": "vue-cli-service serve",
