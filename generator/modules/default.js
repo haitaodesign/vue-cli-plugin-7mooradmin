@@ -2,7 +2,7 @@
  * @Author: lihaitao 
  * @Date: 2018-12-31 13:02:28 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2019-01-30 14:11:34
+ * @Last Modified time: 2019-01-30 15:50:50
  */
 
 const modules = require('../templates/modules/index.js')
@@ -29,7 +29,8 @@ module.exports = api => {
       'vue-template-compiler': '^2.5.21',
       "style-resources-loader": "^1.2.1",
       "stylus": "^0.54.5",
-      "stylus-loader": "^3.0.2"
+      "stylus-loader": "^3.0.2",
+      "vue-cli-plugin-style-resources-loader": "^0.1.3"
     },
     scripts: {
       "serve": "vue-cli-service serve",
