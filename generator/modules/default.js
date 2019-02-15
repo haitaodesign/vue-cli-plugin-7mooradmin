@@ -2,7 +2,7 @@
  * @Author: lihaitao 
  * @Date: 2018-12-31 13:02:28 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2019-02-15 10:23:39
+ * @Last Modified time: 2019-02-15 10:36:50
  */
 
 const modules = require('../templates/modules/index.js')
@@ -23,7 +23,8 @@ module.exports = api => {
       "vue-router": "^3.0.1",
       "vuex": "^3.0.1",
       "normalize.css": "^8.0.1",
-      "qs": "^6.6.0"
+      "qs": "^6.6.0",
+      "axios": "^0.18.0"
     },
     devDependencies: {
       "@vue/cli-plugin-babel": "^3.3.0",

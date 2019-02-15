@@ -2,7 +2,7 @@
  * @Author: lihaitao 
  * @Date: 2019-01-28 17:53:38 
  * @Last Modified by: lihaitao
- * @Last Modified time: 2019-01-31 16:35:00
+ * @Last Modified time: 2019-02-15 10:51:29
  */
 const NAMESPACE = 'moor-init-'
 module.exports = {
@@ -14,5 +14,6 @@ module.exports = {
   element: NAMESPACE + 'element',
   router: NAMESPACE + 'router',
   vuex: NAMESPACE + 'vuex',
-  mockjs: NAMESPACE + 'mockjs'
+  mockjs: NAMESPACE + 'mockjs',
+  axios: NAMESPACE + 'axios'
 }
