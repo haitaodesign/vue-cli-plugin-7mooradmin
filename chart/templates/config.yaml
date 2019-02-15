@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  default.conf: |
+    server {
+        listen 80;
+        server_name default;
+        location / {
+            root  /www;
+            try_files $uri $uri/ /index.html =404;
+            index index.html;
+        }
+    }
+kind: ConfigMap
+metadata:
+  name: fedocs
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade,pre-rollback
+    "helm.sh/hook-delete-policy": "before-hook-creation"

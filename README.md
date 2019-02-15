@@ -18,4 +18,3 @@ yarn build
 <!-- 域名 -->
 http://fe.private-cloud.7moor.com
 ```
-测试

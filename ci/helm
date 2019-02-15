@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [[ "${CI_COMMIT_REF_NAME}" = "master" ]]; then
+  NAMESPACE="prod"
+  DOMAIN="fe.private-cloud.7moor.com"
+fi
+
+helm status fedocs-${NAMESPACE} >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+  # 部署服务
+  helm install --name fedocs-${NAMESPACE} --set ingress.domain=${DOMAIN} --namespace ${NAMESPACE} chart
+else
+  helm upgrade fedocs-${NAMESPACE} --reuse-values chart
+fi
